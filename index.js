@@ -31,8 +31,8 @@ function renderScheme(colors) {
 }
 
 async function getApi() {
-  const hex = colorPicker.value;
-  const strippedHex = hex.slice(1);
+  // const hex = colorPicker.value;
+  const strippedHex = colorPicker.value.slice(1);
   const response = await fetch(
     `https://www.thecolorapi.com/scheme?hex=${strippedHex}&mode=${colorSchemes.value}&count=6`
   );
