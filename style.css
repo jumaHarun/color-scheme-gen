@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+input,
+button,
+select {
+  font: inherit;
+}
+
+/* screen reader only to visually hide content for sighted users (V.I.) only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: .75rem;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: #999;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 1rem;
+}
+
+.container {
+  width: 95%;
+  max-width: 35rem;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+
+.color-picker,
+.color-schemes,
+.get-scheme {
+  min-height: 2.7rem;
+}
+
+.input {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.color-schemes {
+  font-size: 1rem;
+  text-indent: 5px;
+  width: 80%;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  color: #111827;
+}
+
+.get-scheme {
+  border: 1px solid #D1D5DB;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  background: transparent;
+  padding: .75em;
+  color: #374151;
+  cursor: pointer;
+}
+
+
+.colors {
+  min-height: 70vh;
+  height: 100%;
+  display: flex;
+}
+
+.color {
+  width: 20%;
+  display: flex;
+  align-items: end;
+  cursor: pointer;
+}
+
+.hex-code {
+  font-weight: 500;
+  color: #2B283A;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #FFF;
+  padding-block: .75em;
+  cursor: pointer;
+}
+
+.prompt {
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+  background-color: #FFF;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: .3em .5em;
+  border-radius: 5px;
+}
+
+@media (max-width: 450px) {
+  header {
+    flex-direction: column;
+    gap: 1em;
+    align-items: start;
+  }
+  
+  .input {
+    width: 100%;
+  }
+  
+  .colors {
+    flex-direction: column;
+  }
+
+  .color {
+    width: 100%;
+    height: calc(70vh / 6);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hex-code {
+    width: 4rem;
+  }
+}
