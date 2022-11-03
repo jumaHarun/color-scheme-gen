@@ -6,7 +6,6 @@ document.getElementById("getScheme").addEventListener('click', getApi)
 
 document.addEventListener("click", (e) => {
   if(e.target.dataset.hex) {
-    // console.log()
     copyOnClick(e.target.dataset.hex);
   }
 });
