@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Color Scheme Generator</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Scheme Generator</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container">
-      <header>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="title">Color Scheme Generator</h1>
+      </header>
+      
+      <main>
+        <div class="top">
         <div class="input">
-          <input
-            type="color"
-            name="colorPicker"
-            id="colorPicker"
-            class="color-picker"
-          />
+          <input type="color" name="colorPicker" id="colorPicker" class="color-picker" />
 
           <select name="colorSchemes" id="colorSchemes" class="color-schemes">
             <option value="monochrome">Monochrome</option>
@@ -41,15 +40,14 @@
         </div>
 
         <button class="get-scheme" id="getScheme">Get color scheme</button>
-      </header>
+      </div>
+      <div class="colors" id="colors"></div>
 
-      <main>
-        <div class="colors" id="colors"></div>
-
-        <div class="prompt" id="prompt"></div>
+      <div class="prompt" id="prompt"></div>
       </main>
-    </div>
+      </div>
 
-    <script src="index.js"></script>
+  <script src="index.js"></script>
   </body>
+
 </html>

@@ -51,18 +51,23 @@ body {
   background-color: #999;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5em 1rem;
-}
-
 .container {
   width: 95%;
   max-width: 35rem;
   margin: 0 auto;
   background-color: #FFF;
+}
+
+.title {
+  text-align: center;
+  padding: 1rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
 }
 
 .color-picker,
@@ -132,10 +137,11 @@ header {
   font-style: italic;
   padding: .3em .5em;
   border-radius: 5px;
+  display: none;
 }
 
 @media (max-width: 450px) {
-  header {
+  .top {
     flex-direction: column;
     gap: 1em;
     align-items: start;
@@ -143,6 +149,10 @@ header {
   
   .input {
     width: 100%;
+  }
+
+  .get-scheme {
+    align-self: center;
   }
   
   .colors {

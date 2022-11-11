@@ -43,10 +43,12 @@ getApi()
 
 function copyOnClick(hexValue) {
   navigator.clipboard.writeText(`#${hexValue}`)
+  promptEl.style.display = 'block'
   promptEl.textContent = `
   #${hexValue} copied to clipboard
   `;
   setTimeout(() => {
     promptEl.textContent = ''
+    promptEl.style.display = 'none'
   }, 1500);
 }
